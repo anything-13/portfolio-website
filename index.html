@@ -1,0 +1,656 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rojesh Niroula | Portfolio</title>
+
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- EmailJS SDK (for contact form email sending) -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ====================================================
+       NAVBAR
+  ==================================================== -->
+    <header class="navbar" id="navbar">
+      <div class="nav-inner">
+        <!-- Brand / Name -->
+        <a href="#home" class="nav-brand">Rojesh Niroula</a>
+
+        <!-- Desktop Links -->
+        <nav>
+          <ul class="nav-links" id="navLinks">
+            <li><a href="#home" class="nav-link">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#records" class="nav-link">Records</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Hamburger (mobile only) -->
+        <button class="hamburger" id="hamburger" aria-label="Open menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- ====================================================
+       HOME SECTION
+  ==================================================== -->
+    <section id="home" class="section home-section">
+      <div class="container home-layout">
+        <!-- Text side -->
+        <div class="home-text">
+          <p class="home-greeting">Hello, I'm</p>
+          <h1 class="home-name">Rojesh Niroula</h1>
+          <p class="home-title">IT Student &mdash; BSc CSIT</p>
+          <p class="home-intro">
+            This is my personal portfolio where I share my journey as a BSc CSIT
+            student, including my skills, projects, and academic achievements.
+          </p>
+          <div class="home-btns">
+            <a href="#projects" class="btn btn-primary">View Projects</a>
+            <a href="#contact" class="btn btn-secondary">Contact Me</a>
+          </div>
+        </div>
+
+        <!-- Image / Avatar side -->
+        <div class="home-image">
+          <!--
+          Replace the div below with an actual <img> tag when you have a photo:
+          <img src="assets/images/profile.jpg" alt="Rojesh Niroula" />
+        -->
+          <div class="avatar-placeholder">
+            <span>
+              <img
+                src="assets/my photo.jpg"
+                alt="My photo"
+                onclick="openImage()"
+                style="
+                  width: 200px;
+                  height: 200px;
+                  border-radius: 50%;
+                  object-fit: cover;
+                "
+              />
+              <script>
+                function openImage() {
+                  window.open("assets/my photo.jpg", "_blank");
+                }
+              </script>
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================
+       ABOUT SECTION
+  ==================================================== -->
+    <section id="about" class="section about-section">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="section-line"></div>
+
+        <div class="about-grid">
+          <!-- Bio -->
+          <div class="about-bio">
+            <p>
+              I am an IT student who does not know much yet but is very eager to
+              learn new things. I am currently studying BSc CSIT at Tribhuvan
+              University, Nepal.
+            </p>
+            <p>
+              I enjoy exploring different areas of technology, from basic
+              programming to networking concepts, and I hope to grow into a
+              skilled professional over time.
+            </p>
+
+            <!-- Quick details table -->
+            <table class="info-table">
+              <tr>
+                <td class="info-label">Degree</td>
+                <td>BSc CSIT</td>
+              </tr>
+              <tr>
+                <td class="info-label">University</td>
+                <td>Tribhuvan University, Nepal</td>
+              </tr>
+              <tr>
+                <td class="info-label">Email</td>
+                <td>
+                  <a href="mailto:niroularojesh01@gmail.com"
+                    >niroularojesh01@gmail.com</a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td class="info-label">Phone</td>
+                <td><a href="tel:9841167313">9841167313</a></td>
+              </tr>
+            </table>
+          </div>
+
+          <!-- Interests & Goals -->
+          <div class="about-right">
+            <div class="about-box">
+              <h3>My Interests</h3>
+              <ul class="simple-list">
+                <li>Information Technology</li>
+                <li>Networking</li>
+                <li>Basic Programming</li>
+              </ul>
+            </div>
+
+            <div class="about-box">
+              <h3>Career Goal</h3>
+              <p>
+                To keep learning new technologies in IT and gradually develop my
+                skills to become a capable<strong>
+                  Network Administrator</strong
+                >
+                or <strong>Software Developer.</strong>.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- /about-grid -->
+      </div>
+    </section>
+
+    <!-- ====================================================
+       SKILLS SECTION
+  ==================================================== -->
+    <section id="skills" class="section skills-section">
+      <div class="container">
+        <h2 class="section-title">Skills</h2>
+        <div class="section-line"></div>
+        <p class="section-note">Basic to intermediate level.</p>
+
+        <div class="skills-grid">
+          <!-- Programming Languages -->
+          <div class="skill-group">
+            <h3 class="skill-group-title">Programming Languages</h3>
+            <ul class="skill-list">
+              <li class="skill-item">
+                <span class="skill-name">HTML</span>
+                <span class="skill-badge intermediate">Intermediate</span>
+              </li>
+              <li class="skill-item">
+                <span class="skill-name">CSS</span>
+                <span class="skill-badge intermediate">Intermediate</span>
+              </li>
+              <li class="skill-item">
+                <span class="skill-name">JavaScript</span>
+                <span class="skill-badge basic">Basic</span>
+              </li>
+              <li class="skill-item">
+                <span class="skill-name">PHP</span>
+                <span class="skill-badge basic">Basic</span>
+              </li>
+              <li class="skill-item">
+                <span class="skill-name">C &nbsp;⭐</span>
+                <span class="skill-badge intermediate">Intermediate</span>
+              </li>
+              <li class="skill-item">
+                <span class="skill-name">C++</span>
+                <span class="skill-badge basic">Basic</span>
+              </li>
+              <li class="skill-item">
+                <span class="skill-name">Python</span>
+                <span class="skill-badge basic">Basic</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Other Skills -->
+          <div class="skill-group">
+            <h3 class="skill-group-title">Other Skills</h3>
+            <ul class="skill-list">
+              <li class="skill-item">
+                <span class="skill-name">Basic Networking</span>
+                <span class="skill-badge intermediate">Intermediate</span>
+              </li>
+              <li class="skill-item">
+                <span class="skill-name">Database (SQL)</span>
+                <span class="skill-badge basic">Basic</span>
+              </li>
+              <li class="skill-item">
+                <span class="skill-name">Linux (CLI)</span>
+                <span class="skill-badge intermediate">Intermediate</span>
+              </li>
+              <li class="skill-item">
+                <span class="skill-name">MS Office</span>
+                <span class="skill-badge intermediate">Intermediate</span>
+              </li>
+              <li class="skill-item">
+                <span class="skill-name">DSA</span>
+                <span class="skill-badge intermediate">Intermediate</span>
+              </li>
+              <li class="skill-item">
+                <span class="skill-name">AWS baised Cloud Computing</span>
+                <span class="skill-badge intermediate">Intermediate</span>
+              </li>
+              <li class="skill-item">
+                <span class="skill-name">Basic Of Git And Github</span>
+                <span class="skill-badge intermediate">Intermediate</span>
+              </li>
+            </ul>
+            <p class="skill-note">⭐ = Most confident language</p>
+          </div>
+        </div>
+        <!-- /skills-grid -->
+      </div>
+    </section>
+
+    <!-- ====================================================
+       PROJECTS SECTION
+  ==================================================== -->
+    <!-- <section id="projects" class="section projects-section">
+    <div class="container">
+      <h2 class="section-title">Projects</h2>
+      <div class="section-line"></div>
+      <p class="section-note">Early stage projects — more will be added as I keep learning.</p>
+
+      <div class="projects-grid"> -->
+
+    <!-- Project 1 -->
+
+    <!-- <div class="project-card">
+          <h3 class="project-title">Personal Portfolio Website</h3>
+          <p class="project-desc">
+            A simple responsive personal portfolio website built using only
+            HTML, CSS, and JavaScript. No frameworks used.
+          </p>
+          <div class="project-tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+          </div>
+          <div class="project-btns">
+            <a href="#" class="btn btn-small btn-primary">View</a>
+            <a href="#" class="btn btn-small btn-secondary">GitHub</a>
+          </div>
+        </div> -->
+
+    <!-- Project 2 -->
+
+    <!-- <div class="project-card">
+          <h3 class="project-title">Student Result System (C)</h3>
+          <p class="project-desc">
+            A command-line program written in C that stores student marks,
+            calculates GPA, and prints results. Uses file handling for data storage.
+          </p>
+          <div class="project-tags">
+            <span class="tag">C</span>
+            <span class="tag">File I/O</span>
+            <span class="tag">CLI</span>
+          </div>
+          <div class="project-btns">
+            <a href="#" class="btn btn-small btn-primary">View</a>
+            <a href="#" class="btn btn-small btn-secondary">GitHub</a>
+          </div>
+        </div> -->
+
+    <!-- Project 3 -->
+
+    <!-- <div class="project-card">
+          <h3 class="project-title">Basic Login System (PHP)</h3>
+          <p class="project-desc">
+            A simple login and registration system using PHP and MySQL.
+            Includes session management and basic input validation.
+          </p>
+          <div class="project-tags">
+            <span class="tag">PHP</span>
+            <span class="tag">MySQL</span>
+            <span class="tag">HTML</span>
+          </div>
+          <div class="project-btns">
+            <a href="#" class="btn btn-small btn-primary">View</a>
+            <a href="#" class="btn btn-small btn-secondary">GitHub</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section> -->
+
+    <!-- ====================================================
+       RECORDS & CERTIFICATES SECTION
+  ==================================================== -->
+    <section id="records" class="section records-section">
+      <div class="container">
+        <h2 class="section-title">Records &amp; Certificates</h2>
+        <div class="section-line"></div>
+
+        <!-- ── A. Academic Results ── -->
+        <h3 class="subsection-title">Academic Results</h3>
+        <!--
+        HOW TO ADD A NEW RESULT:
+        Copy one <div class="record-item"> and update the title,
+        year, and the href on the button to point to your PDF file.
+        Put the PDF in: assets/records/your-file.pdf
+      -->
+        <div class="records-list">
+          <div class="record-item">
+            <div class="record-icon">📄</div>
+            <div class="record-details">
+              <p class="record-title">SEE Result (Grade 10)</p>
+              <p class="record-meta">NEB &nbsp;|&nbsp; Year: 2021 AD</p>
+            </div>
+            <a
+              href="assets/see-result.jpeg"
+              class="btn btn-small btn-secondary"
+              target="_blank"
+            >
+              View
+            </a>
+          </div>
+
+          <div class="record-item">
+            <div class="record-icon">📄</div>
+            <div class="record-details">
+              <p class="record-title">Grade 11 Result</p>
+              <p class="record-meta">NEB &nbsp;|&nbsp; Year: 2022 AD</p>
+            </div>
+            <a
+              href="assets/11-result.jpeg"
+              class="btn btn-small btn-secondary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View
+            </a>
+          </div>
+
+          <div class="record-item">
+            <div class="record-icon">📄</div>
+            <div class="record-details">
+              <p class="record-title">Grade 12 Result</p>
+              <p class="record-meta">NEB &nbsp;|&nbsp; Year: 2023 AD</p>
+            </div>
+            <a
+              href="assets/12-result.jpeg"
+              class="btn btn-small btn-secondary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View
+            </a>
+          </div>
+
+          <div class="record-item">
+            <div class="record-icon">📄</div>
+            <div class="record-details">
+              <p class="record-title">CSIT Semester 1 Result</p>
+              <p class="record-meta">TU</p>
+            </div>
+            <a
+              href="assets/csit-sem1.jpeg"
+              class="btn btn-small btn-secondary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View
+            </a>
+          </div>
+
+          <div class="record-item">
+            <div class="record-icon">📄</div>
+            <div class="record-details">
+              <p class="record-title">CSIT Semester 2 Result</p>
+              <p class="record-meta">TU</p>
+            </div>
+            <a
+              href="assets/csit-sem2.jpeg"
+              class="btn btn-small btn-secondary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View
+            </a>
+          </div>
+
+          <div class="record-item">
+            <div class="record-icon">📄</div>
+            <div class="record-details">
+              <p class="record-title">CSIT Semester 3 Result</p>
+              <p class="record-meta">TU</p>
+            </div>
+            <a
+              href="assets/csit-sem3.jpeg"
+              class="btn btn-small btn-secondary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View
+            </a>
+          </div>
+
+          <div class="record-item">
+            <div class="record-icon">📄</div>
+            <div class="record-details">
+              <p class="record-title">CSIT Semester 4 Result</p>
+              <p class="record-meta">TU</p>
+            </div>
+            <a
+              href="assets/csit-sem4.jpeg"
+              class="btn btn-small btn-secondary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View
+            </a>
+          </div>
+        </div>
+        <!-- /records-list -->
+
+        <!-- ── B. Certificates ── -->
+        <h3 class="subsection-title" style="margin-top: 40px">Certificates</h3>
+        <!--
+        HOW TO ADD A NEW CERTIFICATE:
+        Copy one <div class="record-item"> and update the title,
+        issuer, and the href. Put the file in: assets/certificates/
+      -->
+        <div class="records-list">
+          <div class="record-item">
+            <div class="record-icon">🏅</div>
+            <div class="record-details">
+              <p class="record-title">AWS Cloud Practitioner</p>
+              <p class="record-meta">Physical Class</p>
+            </div>
+            <a
+              href="assets/AWS.jpeg"
+              class="btn btn-small btn-primary"
+              target="_blank"
+              download
+              rel="noopener noreferrer"
+            >
+              Download
+            </a>
+          </div>
+
+          <div class="record-item">
+            <div class="record-icon">🏅</div>
+            <div class="record-details">
+              <p class="record-title">Basic Linux Commands, Git and GitHub</p>
+              <p class="record-meta">Physical Class</p>
+            </div>
+            <a
+              href="assets/linux_and_git.jpeg"
+              class="btn btn-small btn-primary"
+              target="_blank"
+              download
+              rel="noopener noreferrer"
+            >
+              Download
+            </a>
+          </div>
+
+          <div class="record-item">
+            <div class="record-icon">🏅</div>
+            <div class="record-details">
+              <p class="record-title">Python Data Structures</p>
+              <p class="record-meta">Physical Class</p>
+            </div>
+            <a
+              href="assets/python.jpeg"
+              class="btn btn-small btn-primary"
+              target="_blank"
+              download
+              rel="noopener noreferrer"
+            >
+              Download
+            </a>
+          </div>
+        </div>
+        <!-- /records-list (certificates) -->
+      </div>
+    </section>
+
+    <!-- ====================================================
+       CONTACT SECTION
+  ==================================================== -->
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <h2 class="section-title">Contact</h2>
+        <div class="section-line"></div>
+
+        <div class="contact-grid">
+          <!-- Contact Info -->
+          <div class="contact-info">
+            <h3>Get in Touch</h3>
+            <p>
+              Feel free to reach out for any queries, collaboration, or just to
+              say hello.
+            </p>
+
+            <ul class="contact-list">
+              <li>
+                <span class="contact-icon">📞</span>
+                <a href="tel:9841167313">9841167313</a>
+              </li>
+              <li>
+                <span class="contact-icon">✉️</span>
+                <a href="mailto:niroularojesh01@gmail.com"
+                  >niroularojesh01@gmail.com</a
+                >
+              </li>
+              <li>
+                <span class="contact-icon">📍</span>
+                <span>Nepal</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="contact-form-wrap">
+            <!--
+            ================================================
+            EMAILJS SETUP INSTRUCTIONS (one-time, 5 minutes)
+            ================================================
+            1. Go to https://www.emailjs.com and create a FREE account.
+            2. Add an Email Service (Gmail → connect your Gmail account).
+               Copy the Service ID (looks like: service_xxxxxxx).
+            3. Create an Email Template.
+               - Set "To Email" as: niroularojesh01@gmail.com
+               - Use these template variables:
+                   {{from_name}}   — sender's name
+                   {{from_email}}  — sender's email
+                   {{message}}     — message body
+                   {{reply_to}}    — sender email for reply
+               - Copy the Template ID (looks like: template_xxxxxxx).
+            4. Go to Account → API Keys → copy your Public Key.
+            5. Open script.js and replace these 3 values:
+                 YOUR_PUBLIC_KEY
+                 YOUR_SERVICE_ID
+                 YOUR_TEMPLATE_ID
+            That's it — the form will now email you automatically!
+            ================================================
+          -->
+            <form id="contactForm" novalidate>
+              <div class="form-group">
+                <label for="from_name"
+                  >Your Name <span class="required">*</span></label
+                >
+                <input
+                  type="text"
+                  id="from_name"
+                  name="from_name"
+                  placeholder="e.g. Ram Sharma"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="from_email"
+                  >Your Email <span class="required">*</span></label
+                >
+                <input
+                  type="email"
+                  id="from_email"
+                  name="from_email"
+                  placeholder="e.g. ram@email.com"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="message"
+                  >Message <span class="required">*</span></label
+                >
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  placeholder="Write your message here..."
+                  required
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                class="btn btn-primary full-w"
+                id="submitBtn"
+              >
+                Send Message
+              </button>
+
+              <!-- Status message shown after submit -->
+              <p id="formStatus" class="form-status" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+        <!-- /contact-grid -->
+      </div>
+    </section>
+
+    <!-- ====================================================
+       FOOTER
+  ==================================================== -->
+    <footer class="footer">
+      <p>&copy; <span id="footerYear"></span> Rojesh Niroula | Portfolio</p>
+    </footer>
+
+    <!-- Scroll to top button -->
+    <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Back to top">
+      &#8679;
+    </button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
